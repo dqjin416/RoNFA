@@ -96,6 +96,44 @@ RoNFA significantly outperforms existing methods across all noise types and data
 |            | **RoNFA (Ours)** | **ViT**      | **80.75** | **74.43** | **56.98** | **79.59** | **76.45** |
 
 ---
+## ⚗️ Ablation Study
+
+We assess the importance of key components of **RoNFA** through controlled experiments and design variants:
+
+### 🧪 Effect of Soft vs. Hard K-Means Clustering
+
+| Variant           | MiniImageNet (%) | TieredImageNet (%) |
+|-------------------|------------------|---------------------|
+| Hard K-Means      | 98.88            | 93.49               |
+| **Soft K-Means**  | **99.11**        | **94.85**           |
+
+> **Insight:** Soft cluster assignment leads to smoother and more noise-tolerant prototype learning.
+
+---
+
+### 🧪 Effect of Adaptive Receptive Field Scaling
+
+| Variant                    | MiniImageNet (%) | TieredImageNet (%) |
+|----------------------------|------------------|---------------------|
+| Fixed RF Scale (non-adaptive) | 97.28        | 92.86               |
+| **Adaptive Scale (Ours)**  | **99.11**        | **94.85**           |
+
+> **Insight:** Adaptively adjusting receptive field size per query image improves generalization under uncertainty.
+
+---
+
+### 🧪 Combined Component Analysis (MiniImageNet, ViT Backbone)
+
+| Configuration            | Accuracy (%) |
+|--------------------------|--------------|
+| w/o Adaptive Scale       | 97.28        |
+| w/o Soft K-Means         | 98.88        |
+| **Full RoNFA (Ours)**    | **99.17**    |
+
+> **Conclusion:** Each component (adaptive scale, soft K-Means) independently improves robustness. Their combination leads to the best results.
+
+
+---
 
 ## 📁 Repository Structure
 
