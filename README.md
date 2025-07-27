@@ -21,10 +21,13 @@ RoNFA innovatively integrates:
 
 RoNFA significantly outperforms existing methods across all noise types and datasets.
 
+
 ### 🔹 MiniImageNet — Symmetric & Paired Label Noise
 
 | Model            | Backbone     | 0% Sym    | 20% Sym   | 40% Sym   | 60% Sym   | 40% Pair  |
 | ---------------- | ------------ | --------- | --------- | --------- | --------- | --------- |
+| Qwen-VL-plus     | -            | 98.58     | 81.20     | 58.40     | 31.07     | 76.13     |
+| GPT-4o           | -            | 98.67     | 93.67     | 57.67     | 33.67     | 82.66     |
 | ProtoNet         | Conv4        | 68.95     | 64.39     | 56.26     | 41.61     | 51.01     |
 | RNNP             | Conv4        | 63.57     | 59.71     | 52.44     | 38.85     | 46.04     |
 | TraNFS-3         | Conv4        | 67.65     | 63.53     | 53.00     | 39.57     | 48.55     |
@@ -44,6 +47,8 @@ RoNFA significantly outperforms existing methods across all noise types and data
 
 | Model            | Backbone     | 0% Sym    | 20% Sym   | 40% Sym   | 60% Sym   | 40% Pair  |
 | ---------------- | ------------ | --------- | --------- | --------- | --------- | --------- |
+| Qwen-VL-plus     | -            | 94.93     | 80.54     | 47.47     | 19.20     | 76.00     |
+| GPT-4o           | -            | 97.00     | 77.66     | 58.00     | 21.34     | 83.67     |
 | ProtoNet         | Conv4        | 63.47     | 60.06     | 43.13     | 32.52     | 43.38     |
 | RNNP             | Conv4        | 53.60     | 46.92     | 40.86     | 30.94     | 38.44     |
 | TraNFS-3         | Conv4        | 62.95     | 58.43     | 50.19     | 36.17     | 46.55     |
@@ -88,9 +93,12 @@ RoNFA significantly outperforms existing methods across all noise types and data
 |            | ProtoNet         | ViT          | 97.02     | 95.34     | 89.16     | 96.51     | 94.98     |
 |            | RNNP             | ViT          | 96.54     | 95.03     | 79.18     | 89.25     | 88.51     |
 |            | **RoNFA (Ours)** | **ViT**      | **97.58** | **97.17** | **95.59** | **97.49** | **96.74** |
-|    DTD     | ProtoNet         | Conv4        | 55.48     | 41.24     | 31.22     | 48.44     | 42.89     |
+| DTD        | ProtoNet         | Conv4        | 55.48     | 41.24     | 31.22     | 48.44     | 42.89     |
 |            | RNNP             | Conv4        | 47.46     | 37.35     | 29.40     | 36.37     | 37.32     |
 |            | **RoNFA (Ours)** | **Conv4**    | **57.04** | **44.48** | **33.61** | **51.88** | **49.07** |
+|            | ProtoNet         | ResNet18   | 74.89  | 67.32   | 49.97   | 71.43   | 69.11   |
+|            | RNNP             | ResNet18   | 69.44  | 63.67   | 47.22   | 66.33   | 65.49   |
+|            | **RoNFA (Ours)** | **ResNet18** | **76.01** | **71.85** | **54.44** | **73.95** | **72.02** |
 |            | ProtoNet         | ViT          | 80.68     | 71.22     | 51.85     | 78.01     | 73.89     |
 |            | RNNP             | ViT          | 74.82     | 65.60     | 47.69     | 71.32     | 69.80     |
 |            | **RoNFA (Ours)** | **ViT**      | **80.75** | **74.43** | **56.98** | **79.59** | **76.45** |
